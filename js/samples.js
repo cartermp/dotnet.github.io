@@ -161,9 +161,8 @@ var SampleDescription = React.createClass({
 
 var SampleTitle = React.createClass({
     render: function() {
-        let url = "../samples/sample/" + this.props.name;
         return <h3>
-                    <a href={url}>
+                    <a href={"../samples/sample/" + this.props.name}>
                         {this.props.title}
                     </a>
                </h3>;
@@ -192,14 +191,11 @@ var SampleBox = React.createClass({
 
 var SamplesTable = React.createClass({
     render: function() {
-        let mData = this.props.metadataItems;
-        let rData = this.props.repoData;
-
         var sampleBoxes = [];
-        for (var i = 0; i < mData.length; i++) {
+        for (var i = 0; i < this.props.metadataItems.length; i++) {
             sampleBoxes.push(
-                <SampleBox metadata={mData[i]}
-                           date={mData[i].last_updated}
+                <SampleBox metadata={this.props.metadataItems[i]}
+                           date={this.props.metadataItems[i].last_updated}
                            onLangFilterClicked={this.props.onLangFilterClicked}
                            onConceptFilterClicked={this.props.onConceptFilterClicked}/>
             );
@@ -289,7 +285,7 @@ var FullPane = React.createClass({
                 for (var i = 0; i < arguments.length; i++) {
                     mdataItems.push(JSON.parse(arguments[i][0]));
                     mdataItems[i].repo_name = repos[i].name;
-                    mdataItems[i].last_updated = repos[i].last_updated;
+                    mdataItems[i].last_updated = repos[i].updated_at;
                 }
 
                 this.setState({metadataItems: mdataItems});
