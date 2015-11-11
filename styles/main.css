@@ -264,3 +264,97 @@ footer > .inner-footer a:hover {
     padding: 5px;
   }
 }
+
+/* ---- [ Samples ] ---- */
+
+samples-body {
+  background-color: #e4e4e4;
+}
+
+.samples-card {
+  background-color: #f9f9f9;
+  display: inline-block;
+  padding: 5px 15px 15px 15px;
+  margin: 5px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px 0.25px rgba(0, 0, 0, 0.25);
+  transition-property: all;
+  transition-duration: 0.083s;
+  transition-timing-function: ease-in-out;
+  width: 285px;
+  height: 200px;
+}
+.samples-card h3 {
+  text-align: center;
+  text-size: 24px;
+}
+.samples-card p, .samples-card div {
+  color: #757575;
+  font-size: 13px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.samples-card:hover {
+    box-shadow: 1px 1px 5px 0.25px rgba(0, 0, 0, 0.25);
+}
+
+.samples-overall {
+    display: inline-block;
+    margin-left: 250px;
+}
+
+.samples-nav {
+    position: fixed;
+    width: 250px;
+}
+.samples-nav ul {
+    margin-left:0;
+    margin-right:40px;
+    padding: 0;
+}
+
+.samples-tag {
+    background-color: #829bae;
+    display:inline-block;
+    color:#fff;
+    font-size: 12px;
+    padding:3px;
+    margin:3px 3px 3px 3px;
+}
+.samples-tag:hover {
+    cursor: pointer;
+    transform: scale(1.15, 1.15);
+}
+.samples-tag:active {
+    transform: scale(0.95, 0.95);
+}
+.samples-tag a {
+    box-shadow: none;
+}
+.samples-tag a:hover {
+     background-color: inherit;
+}
+
+.samples-lang-tag {
+    background-color: #8a2be2;
+    display:inline-block;
+    color:#fff;
+    font-size: 12px;
+    padding:3px 3px 3px 3px;
+    margin:3px 3px 3px 3px;
+}
+.samples-lang-tag:hover {
+    cursor: pointer;
+    transform: scale(1.15, 1.15);
+}
+.samples-lang-tag:active {
+    transform: scale(0.95, 0.95);
+}
+.samples-lang-tag a {
+    box-shadow: none;
+}
+.samples-lang-tag a:hover {
+     background-color: inherit;
+}
