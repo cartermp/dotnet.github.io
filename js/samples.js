@@ -162,7 +162,7 @@ var SampleDescription = React.createClass({
 var SampleTitle = React.createClass({
     render: function() {
         return <h3>
-                    <a href={"../samples/sample/" + this.props.name}>
+                    <a href={"../samples/sample/" + this.props.repoName}>
                         {this.props.title}
                     </a>
                </h3>;
@@ -173,7 +173,8 @@ var SampleBox = React.createClass({
     render: function() {
         return (
             <div className="samples-card">
-                <SampleTitle title={this.props.metadata.title} />
+                <SampleTitle title={this.props.metadata.title}
+                             repoName={this.props.metadata.repo_name}/>
                 <SampleDescription description={this.props.metadata.description} />
                 <SampleTags metadata={this.props.metadata}
                             handleLangTagClick={this.props.onLangFilterClicked}
