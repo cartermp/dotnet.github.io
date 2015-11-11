@@ -159,10 +159,12 @@ var SampleDescription = React.createClass({
     }
 });
 
+let SAMPLE_REPO_BASE_URL = "https://github.com/test-sample-repos-for-phillip/";
+
 var SampleTitle = React.createClass({
     render: function() {
         return <h3>
-                    <a href={"../samples/sample/" + this.props.repoName}>
+                    <a href={SAMPLE_REPO_BASE_URL + this.props.repoName}>
                         {this.props.title}
                     </a>
                </h3>;
