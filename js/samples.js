@@ -235,9 +235,7 @@ var FullPane = React.createClass({
         }
 
         let newMetadataItems = this.state.allMetadataItems.filter(metadata => {
-            if (metadata.title.toLowerCase().includes(filterText.toLowerCase())) {
-                return metadata;
-            }
+            return metadata.title.toLowerCase().includes(filterText.toLowerCase())
         });
 
         this.setState({metadataItems: newMetadataItems});
@@ -249,9 +247,7 @@ var FullPane = React.createClass({
         }
 
         let newMetadataItems = this.state.allMetadataItems.filter(item => {
-            if (conceptsContain(item.concepts, concept)) {
-                return item;
-            }
+            return conceptsContain(item.concepts, concept);
         });
 
         this.setState({metadataItems: newMetadataItems});
@@ -263,9 +259,7 @@ var FullPane = React.createClass({
         }
 
         let newMetadataItems = this.state.allMetadataItems.filter(item => {
-            if (item.lang.toLowerCase() === lang.toLowerCase()) {
-                return item;
-            }
+            return item.lang.toLowerCase() === lang.toLowerCase()
         });
 
         this.setState({metadataItems: newMetadataItems});
